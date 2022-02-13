@@ -99,14 +99,12 @@ namespace WPFMediaPlayer
         private void MyMediaElement_MediaOpened(object sender, RoutedEventArgs e)
         {
             ChangeIsPlaying(true);
-            //btnPlayPause.IsEnabled = true;
 
-            // Create a timer that will update the counters and the time slider
             _timerVideoTime = new()
             {
                 Interval = TimeSpan.FromSeconds(1)
             };
-            //_timerVideoTime.Tick += new EventHandler(Timer_Tick);
+            _timerVideoTime.Tick += new EventHandler(timer_Tick);
             _timerVideoTime.Start();
         }
 
