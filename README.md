@@ -44,7 +44,7 @@ Open in Visual Studio and Build Project
 # Contribute to project
 
 
-Open a new pull request, any supportis welcome, the more the better. Thanks 
+Open a new pull request, any support is welcome, the more the better. Thanks 
 
 
 
