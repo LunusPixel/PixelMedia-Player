@@ -36,7 +36,8 @@ namespace WPFMediaPlayer
         {
             OpenFileDialog openFileDialog = new()
             {
-                Filter = @"Video files (*.mpg; *.mpeg; *.avi; *.mp4; *.m3u8; *.m3u;)| *.mpg; *.mpeg; *.avi; *.mp4 *.m3u *.m3u8 *.mkv"
+                Filter = @"Video files 
+                (*.mpg; *.mpeg; *.avi; *.mp4;;)| *.mpg; *.mpeg; *.avi; *.mp4"
             };
             if (openFileDialog.ShowDialog() == true)
             {
@@ -132,7 +133,12 @@ namespace WPFMediaPlayer
 
         private void sliProgress_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            //lblProgressStatus.Text = TimeSpan.FromSeconds(sliProgress.Value).ToString(@"hh\:mm\:ss");
+            lblProgressStatus.Text = TimeSpan.FromSeconds(sliProgress.Value).ToString(@"hh\:mm\:ss");
+        }
+
+        private void Grid_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            mediaPlayer.Volume += (e.Delta > 0) ? 0.1 : -0.1;
         }
 
         private void Play_CanExecute(object sender, CanExecuteRoutedEventArgs e)

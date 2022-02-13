@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av"
            x:Name="Pixel_Media_Player" x:Class="WPFMediaPlayer.MainWindow"
-        Title="Pixel Media Player" Height="511" Width="1006" >
+        Title="Pixel Media Player" Height="545" Width="1039" >
     <Window.CommandBindings>
         <CommandBinding Command="MediaCommands.Play" CanExecute="Play_CanExecute" Executed="Play_Executed" />
         <CommandBinding Command="MediaCommands.Pause" CanExecute="Pause_CanExecute" Executed="Pause_Executed" />
@@ -18,25 +18,25 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <Menu Grid.ColumnSpan="2">
+        <Menu Grid.ColumnSpan="2" Height="48" VerticalAlignment="Center">
             <MenuItem Header="File">
                 <MenuItem Header="Open" Click="Open_OnClick"/>
             </MenuItem>
             <MenuItem Header="About" Click="About_OnClick" />
-            <ToolBar Height="30" Width="94" Margin="0,0,0,4" RenderTransformOrigin="0.762,0.422">
+            <ToolBar Height="29" Width="156" RenderTransformOrigin="0.762,0.422">
                 <Separator />
-                <Button Command="MediaCommands.Play" Background="White">
+                <Button Command="MediaCommands.Play">
                     <Image Source="/Pictures/Play.png"/>
                 </Button>
-                <Button Command="MediaCommands.Pause" Background="#FFF70000">
-                    <Image Source="/Pictures/Pause.png"/>
+                <Button Command="MediaCommands.Pause" Width="27">
+                    <Image Source="/Pictures/Pause.png" Width="44" Height="32"/>
                 </Button>
             </ToolBar>
         </Menu>
 
         <MediaElement x:Name="mediaPlayer" Grid.Row="1" LoadedBehavior="Manual" UnloadedBehavior="Manual"
                       MediaEnded="MediaElement_OnMediaEnded" MediaFailed="MediaElement_OnMediaFailed"
-                      MediaOpened="MyMediaElement_MediaOpened" Grid.ColumnSpan="2"/>
+                      MediaOpened="MyMediaElement_MediaOpened" Grid.ColumnSpan="2" Margin="0,19,0,0"/>
         <StackPanel Orientation="Vertical" Grid.Row="2" Grid.ColumnSpan="2">
 
             <Grid Margin="10">
@@ -64,6 +64,9 @@
             </StatusBar.ItemsPanel>
             <StatusBarItem Grid.Column="1" HorizontalContentAlignment="Stretch" Margin="82,6,-3,2">
                 <Slider x:Name="sliProgress" Thumb.DragStarted="sliProgress_DragStarted"  Thumb.DragCompleted="sliProgress_DragCompleted" ValueChanged="sliProgress_ValueChanged" Margin="-77,0,4,0" />
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock Name="lblProgressStatus">00:00:00</TextBlock>
             </StatusBarItem>
             <StatusBarItem Grid.Column="2"/>
             <Grid Background="#FF363636"/>
