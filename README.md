@@ -2,7 +2,7 @@
 
 Pixel Media Player is a simple to use Media Player.
 
- Markup : * Feautures:
+ * Feautures:
               * Play & Pause Video
               * Video Seek
               * (*.mpg; *.mpeg; *.avi; *.mp4; *.m3u8; *.m3u; Support
@@ -16,7 +16,7 @@ Pixel Media Player is a simple to use Media Player.
 # Features coming soon:
 
 
- Markup : * Feautures:
+ * Feautures:
               * Playlist support
               * Volume Control (Increase volume of media playback)
               * Live Media Playback
