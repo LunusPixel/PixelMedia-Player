@@ -2,7 +2,7 @@
 
 Pixel Media Player is a simple to use Media Player.
 
-![Imgur Image](https://imgur.com/3VzzcK1.gif)
+![Imgur](https://imgur.com/3VzzcK1)
 
  * Feautures:
               
