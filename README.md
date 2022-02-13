@@ -6,7 +6,7 @@ Pixel Media Player is a simple to use Media Player.
 
  * Feautures:
               
-              * Play & Pause Video
+              * Play & Pause Video (Click White Box so buttons are unlocked, then Click Red box for Pause/Play)
               * Video Seek
               * *.mpg; *.mpeg; *.avi; *.mp4; *.m3u8; *.m3u; Support
               * Dark Themed and simple use UI
