@@ -35,7 +35,7 @@ Pixel Media Player is a simple to use Media Player.
 
 Download project for latest releases:
 
-Links: 
+Links: https://github.com/LunusPixel/PixelMedia-Player/releases/tag/Release
 
 
 
