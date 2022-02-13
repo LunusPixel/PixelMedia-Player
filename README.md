@@ -2,6 +2,9 @@
 
 Pixel Media Player is a simple to use Media Player.
 
+https://imgur.com/a/ST7N9nb
+
+
  * Feautures:
               
               * Play & Pause Video
