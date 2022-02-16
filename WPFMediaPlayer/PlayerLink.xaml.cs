@@ -28,7 +28,7 @@ namespace PixelMedia
 
         private void Btn_Go_Click(object sender, RoutedEventArgs e)
         {
-            Uri mul = new Uri("https://tv123.me/iptv/2015410/ambAwfQwMj/Default ");
+            Uri mul = new Uri(" ");
 
             IEnumerable<Uri> listrui = LoadPlaylist(mul);
             foreach (Uri ri in listrui)
