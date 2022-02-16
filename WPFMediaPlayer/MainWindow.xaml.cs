@@ -5,6 +5,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Threading;
 using Microsoft.Win32;
+using PixelMedia;
 
 namespace WPFMediaPlayer
 {
@@ -14,7 +15,7 @@ namespace WPFMediaPlayer
     public partial class MainWindow : HandyControl.Controls.Window
     {
         private const string TIME_FORMAT = @"hh\:mm\:ss";
-        private bool _isplaying = false;
+        private bool _isplaying = true;
         private DispatcherTimer _timerVideoTime;
         private bool userIsDraggingSlider = false;
         private bool mediaPlayerIsPlaying = false;
@@ -36,8 +37,8 @@ namespace WPFMediaPlayer
         {
             OpenFileDialog openFileDialog = new()
             {
-                Filter = @"Video files 
-                (*.mpg; *.mpeg; *.avi; *.mp4;;)| *.mpg; *.mpeg; *.avi; *.mp4"
+                Filter = @"All Media Files|*.wav;*.aac;*.wma;*.wmv;*.avi;*.mpg;*.mpeg;*.m1v;*.mp2;*.mp3;*.mpa;*.mpe;*.m3u;*.mp4;*.mov;*.3g2;*.3gp2;*.3gp;*.3gpp;*.m4a;*.cda;*.aif;*.aifc;*.aiff;*.mid;*.midi;*.rmi;*.mkv;*.WAV;*.AAC;*.WMA;*.WMV;*.AVI;*.MPG;*.MPEG;*.M1V;*.MP2;*.MP3;*.MPA;*.MPE;*.M3U;*.MP4;*.MOV;*.3G2;*.3GP2;*.3GP;*.3GPP;*.M4A;*.CDA;*.AIF;*.AIFC;*.AIFF;*.MID;*.MIDI;*.RMI;*.MKV"
+                //"Video files/m3u (*.mpg; *.mpeg; *.avi; *.mp4; *.m3u;)| *.mpg; *.mpeg; *.avi; *.mp4 *.m3u;"
             };
             if (openFileDialog.ShowDialog() == true)
             {
@@ -50,6 +51,12 @@ namespace WPFMediaPlayer
         {
             SubWindow subWindow = new SubWindow();
             subWindow.Show();
+        }
+
+        private void Player_OnClick(object sendder, RoutedEventArgs e)
+        {
+            PlayerLink PlayerLink = new PlayerLink();
+            PlayerLink.Show();
         }
 
         private void OnMediaEnded()

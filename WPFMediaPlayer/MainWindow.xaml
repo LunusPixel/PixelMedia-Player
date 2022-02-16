@@ -23,6 +23,7 @@
                 <MenuItem Header="Open" Click="Open_OnClick"/>
             </MenuItem>
             <MenuItem Header="About" Click="About_OnClick" />
+            <MenuItem Header="Playlist" Click="Player_OnClick"/>
             <ToolBar Height="29" Width="156" RenderTransformOrigin="0.762,0.422">
                 <Separator />
                 <Button Command="MediaCommands.Play">
